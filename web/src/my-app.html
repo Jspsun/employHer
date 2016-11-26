@@ -22,6 +22,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="my-icons.html">
 
+<link rel="import" href="../bower_components/paper-search/paper-search-bar.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/polymerfire/firebase.html">
+
 <dom-module id="my-app">
   <template>
     <style>
@@ -63,6 +67,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
+      <firebase-app database-url="https://breakinequality.firebaseio.com/"
+                    api-key="AIzaSyB-aHO2JYOcvFmjuifuHVDpF_GAOWRGQ58">
+      </firebase-app>
+
+      <firebase-document
+              path="/applicants"
+              data="{{applicants}}">
+      </firebase-document>
+
     <app-location route="{{route}}"></app-location>
     <app-route
         route="{{route}}"
@@ -71,25 +84,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         tail="{{subroute}}"></app-route>
 
     <app-drawer-layout fullbleed>
-      <!-- Drawer content -->
-      <app-drawer>
+        <!-- Drawer content -->
+      <!--<app-drawer>
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="view1" href="/view1">View One</a>
           <a name="view2" href="/view2">View Two</a>
           <a name="view3" href="/view3">View Three</a>
         </iron-selector>
-      </app-drawer>
+      </app-drawer>-->
 
       <!-- Main content -->
       <app-header-layout has-scrolling-region>
 
-        <app-header condenses reveals effects="waterfall">
+          <div style="background: url(http://www.srune.com/media/uploads/18/5634be14e0366.jpg) no-repeat center center fixed; background-size: cover; height: 500px;">
+          </div>
+
+          <paper-search-bar placeholder="Search for applicants" nr-selected-filters="3" on-paper-search-search="search" on-paper-search-filter="filter" hide-filter-button="true"></paper-search-bar>
+
+          <!--<app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
             <div main-title>My App</div>
           </app-toolbar>
-        </app-header>
+        </app-header>-->
+
+          <template is="dom-repeat" items="{{applicants}}" as="applicant">
+              <p>applicant</p>
+          </template>
 
         <iron-pages
             selected="[[page]]"
@@ -105,35 +127,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </app-drawer-layout>
   </template>
 
-  <script>
-    Polymer({
-      is: 'my-app',
+    <script>
+        Polymer({
+            properties: {
+                uid: String,
+                data: {
+                    type: Object,
+                    observer: 'dataChanged'
+                }
+            },
 
-      properties: {
-        page: {
-          type: String,
-          reflectToAttribute: true,
-          observer: '_pageChanged'
-        }
-      },
-
-      observers: [
-        '_routePageChanged(routeData.page)'
-      ],
-
-      _routePageChanged: function(page) {
-        this.page = page || 'view1';
-      },
-
-      _pageChanged: function(page) {
-        // Load page import on demand. Show 404 page if fails
-        var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
-        this.importHref(resolvedPageUrl, null, this._showPage404, true);
-      },
-
-      _showPage404: function() {
-        this.page = 'view404';
-      }
-    });
-  </script>
+            dataChanged: function (newData, oldData) {
+                console.log(newData);
+                console.log(oldData);
+            }
+        });
+    </script>
 </dom-module>

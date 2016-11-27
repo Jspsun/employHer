@@ -8,6 +8,9 @@ app.post("/message", function (request, response) {
   
 });
 
+app.get("/", function (request, response) {
+  response.sendFile(/views/index.html);
+});
 
 console.log("hello")
 

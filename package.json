@@ -20,6 +20,6 @@
     "body-parser": "~1.15.2"
   },
   "engines": {
-    "node": "7.1.0"
+    "node": "6.9.1"
   }
 }

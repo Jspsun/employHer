@@ -1,0 +1,67 @@
+2016-11-27T02:05:58.237343+00:00 heroku[slug-compiler]: Slug compilation started
+2016-11-27T02:10:57.823416+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=d52906a8-3f5c-42bb-8c59-8bb972cd90f1 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:13:56.073319+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=9feff6ba-5ffb-4077-ab03-b6c3873612f4 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:13:56.991975+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=employ-her.herokuapp.com request_id=3966e967-5b1a-43c4-829e-bb94d8682e48 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:18:33.291538+00:00 heroku[slug-compiler]: Slug compilation started
+2016-11-27T02:18:45.168097+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=fb39d9a8-29ac-41aa-8dcf-f08553a0e710 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:18:45.804300+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=employ-her.herokuapp.com request_id=238935ca-020d-4135-bec3-c689ef5a2a7e fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:19:51.357949+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=19acae4a-6861-4b50-8826-424d4ab18084 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:19:51.957428+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=employ-her.herokuapp.com request_id=3a9c78d9-13fb-4d1c-a673-0463020cdb72 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:23:54.128527+00:00 heroku[slug-compiler]: Slug compilation started
+2016-11-27T02:24:18.549757+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=5a153b96-e4a5-4928-ad33-c47f8f74de08 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:19.342751+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=employ-her.herokuapp.com request_id=38781b42-5215-4d88-9aca-eeac4790267a fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:22.567143+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=03428116-2570-4c2b-8a47-e1857dbf7b0e fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:22.898820+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=employ-her.herokuapp.com request_id=8cd8c33c-8579-412e-bf08-f5bc9da51bd2 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:34.543568+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=14f5be65-799b-4341-8fde-3ec33d9ce35e fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:34.705546+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=employ-her.herokuapp.com request_id=4561c02b-cd96-4da2-b89b-4a1e222b4160 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:38.385856+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=5d717ab4-8071-46d7-a37d-400d936f6710 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:39.307216+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=employ-her.herokuapp.com request_id=5b8956d3-26ad-47d8-9029-c46355e5ef4a fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:41.802475+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=employ-her.herokuapp.com request_id=6e19bef9-38e7-4cea-9337-40dde95f4d60 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T02:24:42.295961+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=employ-her.herokuapp.com request_id=856de2bf-f0bc-4370-a3c8-9fffc8f2cd34 fwd="208.72.125.2" dyno= connect= service= status=502 bytes=
+2016-11-27T03:55:25.511317+00:00 heroku[slug-compiler]: Slug compilation started
+2016-11-27T05:11:15.101311+00:00 heroku[slug-compiler]: Slug compilation started
+2016-11-27T05:11:15.101320+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-11-27T05:11:16.423103+00:00 heroku[web.1]: Starting process with command `node server.js`
+2016-11-27T05:11:18.221300+00:00 app[web.1]:     throw err;
+2016-11-27T05:11:18.221286+00:00 app[web.1]: module.js:471
+2016-11-27T05:11:18.221301+00:00 app[web.1]:     ^
+2016-11-27T05:11:18.221302+00:00 app[web.1]: 
+2016-11-27T05:11:18.221302+00:00 app[web.1]: Error: Cannot find module '/app/server.js'
+2016-11-27T05:11:18.221303+00:00 app[web.1]:     at Function.Module._resolveFilename (module.js:469:15)
+2016-11-27T05:11:18.221304+00:00 app[web.1]:     at Function.Module._load (module.js:417:25)
+2016-11-27T05:11:18.221305+00:00 app[web.1]:     at Module.runMain (module.js:604:10)
+2016-11-27T05:11:18.221305+00:00 app[web.1]:     at run (bootstrap_node.js:394:7)
+2016-11-27T05:11:18.221306+00:00 app[web.1]:     at startup (bootstrap_node.js:149:9)
+2016-11-27T05:11:18.221306+00:00 app[web.1]:     at bootstrap_node.js:509:3
+2016-11-27T05:11:18.302279+00:00 heroku[web.1]: Process exited with status 1
+2016-11-27T05:11:18.318135+00:00 heroku[web.1]: State changed from starting to crashed
+2016-11-27T05:11:18.320445+00:00 heroku[web.1]: State changed from crashed to starting
+2016-11-27T05:11:19.698627+00:00 heroku[web.1]: Starting process with command `node server.js`
+2016-11-27T05:11:21.459811+00:00 heroku[web.1]: Process exited with status 1
+2016-11-27T05:11:21.384068+00:00 app[web.1]: module.js:471
+2016-11-27T05:11:21.384084+00:00 app[web.1]:     throw err;
+2016-11-27T05:11:21.384084+00:00 app[web.1]:     ^
+2016-11-27T05:11:21.384085+00:00 app[web.1]: 
+2016-11-27T05:11:21.384086+00:00 app[web.1]: Error: Cannot find module '/app/server.js'
+2016-11-27T05:11:21.384088+00:00 app[web.1]:     at Function.Module._load (module.js:417:25)
+2016-11-27T05:11:21.384087+00:00 app[web.1]:     at Function.Module._resolveFilename (module.js:469:15)
+2016-11-27T05:11:21.384088+00:00 app[web.1]:     at Module.runMain (module.js:604:10)
+2016-11-27T05:11:21.384089+00:00 app[web.1]:     at run (bootstrap_node.js:394:7)
+2016-11-27T05:11:21.384089+00:00 app[web.1]:     at startup (bootstrap_node.js:149:9)
+2016-11-27T05:11:21.384090+00:00 app[web.1]:     at bootstrap_node.js:509:3
+2016-11-27T05:11:21.471668+00:00 heroku[web.1]: State changed from starting to crashed
+2016-11-27T05:34:42.530962+00:00 heroku[web.1]: State changed from crashed to starting
+2016-11-27T05:34:43.862567+00:00 heroku[web.1]: Starting process with command `node server.js`
+2016-11-27T05:34:45.699753+00:00 heroku[web.1]: Process exited with status 1
+2016-11-27T05:34:45.621158+00:00 app[web.1]: module.js:471
+2016-11-27T05:34:45.621185+00:00 app[web.1]:     throw err;
+2016-11-27T05:34:45.621186+00:00 app[web.1]:     ^
+2016-11-27T05:34:45.621186+00:00 app[web.1]: 
+2016-11-27T05:34:45.621187+00:00 app[web.1]: Error: Cannot find module '/app/server.js'
+2016-11-27T05:34:45.621189+00:00 app[web.1]:     at Function.Module._load (module.js:417:25)
+2016-11-27T05:34:45.621188+00:00 app[web.1]:     at Function.Module._resolveFilename (module.js:469:15)
+2016-11-27T05:34:45.621189+00:00 app[web.1]:     at Module.runMain (module.js:604:10)
+2016-11-27T05:34:45.621190+00:00 app[web.1]:     at startup (bootstrap_node.js:149:9)
+2016-11-27T05:34:45.621190+00:00 app[web.1]:     at run (bootstrap_node.js:394:7)
+2016-11-27T05:34:45.621191+00:00 app[web.1]:     at bootstrap_node.js:509:3
+2016-11-27T05:34:45.711640+00:00 heroku[web.1]: State changed from starting to crashed

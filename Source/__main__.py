@@ -1,2 +1,4 @@
+from TextHandler import TextHandler
+
 textHandlerBot = TextHandler()
-textHandlerBot.process("Jonathan meme")
+textHandlerBot.processName("Jonathan Sun", "99999999")

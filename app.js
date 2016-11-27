@@ -29,18 +29,30 @@ function TextHandler(){
   //description
 
   this.process=function(message, phoneNumber){
-   var newMessage=message.split().slice(1,message.length).join();
+    //newMessage=message.split().slice(1,message.length).join();
 
-    if (message.split()[0].toLowerCase()==="name:"){
-      this.processName(newMessage,phoneNumber);
-    }
-    else if (message.split()[0].toLowerCase()==="jobs:"){
-      this.processJobs(newMessage,phoneNumber);
-    }
-    else{
-      this.processDescription(message, phoneNumber);
-          console.log(message.split()[0].toLowerCase());
-    }
+    //Name LastName: Jobs,s,s,s,s
+    var firstSplit=message.split(" : ");
+    var name=firstSplit[0];
+    var jobList=firstSplit[1];
+
+    this.sendBot.send("Hi "+ name+"("+phoneNumber+"). You are interested in: "+ jobList, phoneNumber);
+
+
+
+
+
+
+    // if (message.split(" ")[0].toLowerCase()==="name:"){
+    //   this.processName(newMessage,phoneNumber);
+    // }
+    // else if (message.split(" ")[0].toLowerCase()==="jobs:"){
+    //   this.processJobs(newMessage,phoneNumber);
+    // }
+    // else{
+    //   this.processDescription(message, phoneNumber);
+    //       console.log(message.split(" "));
+    // }
   }
 
   //name
@@ -75,7 +87,6 @@ function TextHandler(){
     return messageItem;
   }
 }
-
 
 
 var text;

@@ -15,14 +15,17 @@ function Sender(){
   }
 }
 
-
-
-
 var textHandlerBot=new TextHandler();
 textHandlerBot.process("Name: Jonathan Sun", "6477747865")
 textHandlerBot.process("Jobs: memes learning", "6477747865")
 textHandlerBot.process("I like to write code", "6477747865")
 
+function Message(){
+this.senderNo=null;
+senderName=null;
+jobs=null;
+description=null;
+}
 function TextHandler(){
   this.sendBot=new Sender();
 
@@ -73,11 +76,4 @@ function TextHandler(){
     this.sendBot.send("Your Profile: " + messageItem.description,messageItem.senderNo);
     return messageItem;
   }
-}
-
-function Message(){
-this.senderNo=null;
-senderName=null;
-jobs=null;
-description=null;
 }

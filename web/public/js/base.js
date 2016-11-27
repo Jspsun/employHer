@@ -19,7 +19,7 @@ var arr = [];
 for(var x in parsed){
   arr.push(parsed[x]);
 }
-applicantdata="<center><h3 style=\"margin-bottom: 20px; padding: 5px; color: #3f51b5;\">We found an employhee!</h3></center><h4><span class=\"glyphicon glyphicon-user\"></span> "+arr[0].name+"</h4>"+"<h4><span class=\"glyphicon glyphicon-earphone\"></span> "+arr[0].number+"</h4>";
+applicantdata="<center><h3 style=\"margin-bottom: 20px; padding: 5px; color: #3f51b5;\">We found an employee!</h3></center><h4><span class=\"glyphicon glyphicon-user\"></span> "+arr[0].name+"</h4>"+"<h4><span class=\"glyphicon glyphicon-earphone\"></span> "+arr[0].number+"</h4>";
 $('#dummy').avgrund({
   height: 150,
   holderClass: 'custom',

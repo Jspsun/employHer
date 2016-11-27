@@ -1,5 +1,4 @@
-from Sender import Sender
+from TextHandler import TextHandler
 
-sendBot = Sender()
-
-sendBot.send("memes")
+textHandlerBot = TextHandler()
+textHandlerBot.process("Jonathan meme")

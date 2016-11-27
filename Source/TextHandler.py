@@ -7,8 +7,13 @@ class TextHandler(object):
 
     # name
     # job
-    def process(self):
-        i = 0
+    def process(self, message, phoneNumber):
+        newMessage = ' '.join(message.split()[1:])
+
+        if message.split()[0].lower() == "name:":
+            TextHandler.processName(self, newMessage, phoneNumber)
+        elif message.split()[0].lower() == "jobs:":
+            TextHandler.processJobs(self, newMessage, phoneNumber)
 
     # name
     def processName(self, message, phoneNumber):
@@ -19,8 +24,14 @@ class TextHandler(object):
 
         # responds
         TextHandler.sendBot.send(
-            "Hi " + messageItem.senderName + ". Your phone number is " + messageItem.senderNo + " What Jobs are you interested in?")
+            "Hi " + messageItem.senderName + "(" + messageItem.senderNo + "). What Jobs are you interested in?", messageItem.senderNo)
         return messageItem
 
     def processJobs(self, message, phoneNumber):
         messageItem = Message()
+
+        messageItem.senderNo = phoneNumber
+        messageItem.jobs = message.split()
+        TextHandler.sendBot.send(
+            "You are interested in: " + ', '.join(messageItem.jobs), messageItem.senderNo)
+        return messageItem

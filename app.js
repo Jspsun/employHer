@@ -37,9 +37,12 @@ function TextHandler(){
     //newMessage=message.split().slice(1,message.length).join();
 
     //Name LastName: Jobs,s,s,s,s
-    var firstSplit=message.split(" : ");
+    var firstSplit=message.split(":");
     var name=firstSplit[0];
+    name=name.trim();
     var jobList=firstSplit[1];
+    jobList=jobList.trim();
+    jobList=joblist.toLowerCase();
 
     firebase.database().ref("applicants").child(jobList).push().set({"name": name, "number": phoneNumber});
 
@@ -63,36 +66,36 @@ function TextHandler(){
   }
 
   //name
-  this.processName=function(message,phoneNumber){
-    var messageItem=new Message();
-
-    messageItem.senderName=message;
-    messageItem.senderNo=phoneNumber;
-
-    //responds
-    this.sendBot.send("Hi "+ messageItem.senderName+"("+messageItem.senderNo+ "). What jobs are you interested in?", messageItem.senderNo);
-    return messageItem;
-  }
-  this.processJobs=function(message, phoneNumber){
-    var messageItem=new Message();
-    messageItem.senderNo=phoneNumber;
-    messageItem.jobs= message.split();
-
-
-
-    //responds
-    this.sendBot.send("You are interested in: "+ messageItem.jobs.join(), phoneNumber);
-    return messageItem;
-  }
-  this.processDescription=function(message, phoneNumber){
-    var messageItem=new Message();
-    messageItem.senderNo= phoneNumber
-    messageItem.description=message;
-
-    //responds
-    this.sendBot.send("Your Profile: " + messageItem.description,messageItem.senderNo);
-    return messageItem;
-  }
+//   this.processName=function(message,phoneNumber){
+//     var messageItem=new Message();
+//
+//     messageItem.senderName=message;
+//     messageItem.senderNo=phoneNumber;
+//
+//     //responds
+//     this.sendBot.send("Hi "+ messageItem.senderName+"("+messageItem.senderNo+ "). What jobs are you interested in?", messageItem.senderNo);
+//     return messageItem;
+//   }
+//   this.processJobs=function(message, phoneNumber){
+//     var messageItem=new Message();
+//     messageItem.senderNo=phoneNumber;
+//     messageItem.jobs= message.split();
+//
+//
+//
+//     //responds
+//     this.sendBot.send("You are interested in: "+ messageItem.jobs.join(), phoneNumber);
+//     return messageItem;
+//   }
+//   this.processDescription=function(message, phoneNumber){
+//     var messageItem=new Message();
+//     messageItem.senderNo= phoneNumber
+//     messageItem.description=message;
+//
+//     //responds
+//     this.sendBot.send("Your Profile: " + messageItem.description,messageItem.senderNo);
+//     return messageItem;
+//   }
 }
 
 

@@ -1,5 +1,10 @@
 var twilio = require('twilio');
-
+var firebase = require('firebase');
+var app = firebase.initializeApp({ apiKey: "AIzaSyB-aHO2JYOcvFmjuifuHVDpF_GAOWRGQ58",
+        authDomain: "breakinequality.firebaseapp.com",
+        databaseURL: "https://breakinequality.firebaseio.com",
+        storageBucket: "breakinequality.appspot.com",
+        messagingSenderId: "690173784028" });
 function Sender(){
 // Find your account sid and auth token in your Twilio account Console.
   this.client = twilio('AC9f4dc30b29b932a901627da4c92a38a4', '0c85242dcc5c50703f691d66fb1d931e');
@@ -35,6 +40,8 @@ function TextHandler(){
     var firstSplit=message.split(" : ");
     var name=firstSplit[0];
     var jobList=firstSplit[1];
+
+    firebase.database().ref("applicants").child(jobList).push().set({"name": name, "number": phoneNumber});
 
     this.sendBot.send("Hi "+ name+". You are interested in working as a: "+ jobList, phoneNumber);
 

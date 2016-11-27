@@ -3,9 +3,33 @@ $(document).on('DOMContentLoaded', function () {
     // Initialise Firebase
     initFirebase();
 
+    var applicantdata=null;
+
+
+
     $('#applicant-search').on('keypress', function (e) {
         if(e.which === 13){
             hasher.setHash('search/' + $(this).val());
+            firebase.database().ref("applicants").child($(this).val()).orderByKey().limitToLast(1).once("value").then(function (snapshot) {
+              applicantdata=JSON.stringify(snapshot.val());
+              var parsed = JSON.parse(applicantdata);
+
+var arr = [];
+
+for(var x in parsed){
+  arr.push(parsed[x]);
+}
+applicantdata="<center><h3 style=\"margin-bottom: 20px; padding: 5px; color: #3f51b5;\">We found an employhee!</h3></center><h4><span class=\"glyphicon glyphicon-user\"></span> "+arr[0].name+"</h4>"+"<h4><span class=\"glyphicon glyphicon-earphone\"></span> "+arr[0].number+"</h4>";
+$('#dummy').avgrund({
+  height: 150,
+  holderClass: 'custom',
+  showClose: false,
+  onBlurContainer: '.site-title-container',
+  template: applicantdata
+});
+              $("#dummy").click();
+            });
+
         }
     });
 });

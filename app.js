@@ -24,6 +24,6 @@ var app = express();
 
 // console.log("hello")
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+var listener = app.listen(process.env.PORT, function () {
+  console.log('Your app is listening on port ' + listener.address().port);
 });

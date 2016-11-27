@@ -17,7 +17,9 @@
   },
   "dependencies": {
     "express": "~4.14.0",
-    "body-parser": "~1.15.2"
+    "body-parser": "~1.15.2",
+    "mustache": "~2.3.0",
+    "consolidate": "~0.14.5"
   },
   "engines": {
     "node": "6.9.1"

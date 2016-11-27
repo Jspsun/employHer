@@ -1,4 +1,5 @@
 var express = require('express');
+var engines = require('consolidate');
 var bodyParser = require('body-parser');
 console.log("hello");
 var app = express();
@@ -6,10 +7,11 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: false})); 
 
 app.set('views', __dirname + '/views');
-
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
 
 app.get("/", function (request, response) {
-  response.render("./views/index.html");
+  response.render("index.html");
 });
 
 

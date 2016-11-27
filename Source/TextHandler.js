@@ -8,14 +8,15 @@ function TextHandler(){
   this.process=function(message, phoneNumber){
     newMessage=message.split().slice(1,message.length).join();
 
-    if (message.split()[0].toLowerCase()==="name: "){
+    if (message.split()[0].toLowerCase()==="name:"){
       this.processName(newMessage,phoneNumber);
     }
-    else if (message.split()[0].toLowerCase()==="jobs: "){
+    else if (message.split()[0].toLowerCase()==="jobs:"){
       this.processJobs(newMessage,phoneNumber);
     }
     else{
       this.processDescription(message, phoneNumber);
+          console.log("test");
     }
   }
 
@@ -34,6 +35,8 @@ function TextHandler(){
     var messageItem=new Message();
     messageItem.senderNo=phoneNumber;
     messageItem.jobs= message.split();
+
+
 
     //responds
     this.sendBot.send("You are interested in: "+ messageItem.jobs.join(), phoneNumber);

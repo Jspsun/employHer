@@ -7,7 +7,7 @@ function Sender(){
   this.send=function(message, phoneNumber){
 
     // Send the text message.
-    client.sendMessage({
+    this.client.sendMessage({
       to: phoneNumber,
       from: '6473615601',
       body: message

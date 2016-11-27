@@ -1,5 +1,5 @@
 function TextHandler(){
-  this.sendBot=Sender();
+  this.sendBot=new Sender();
 
   //name
   //job
@@ -12,10 +12,10 @@ function TextHandler(){
       this.processName(newMessage,phoneNumber);
     }
     else if (message.split()[0].toLowerCase()==="jobs: "){
-      this.processDescription(newMessage,phoneNumber);
+      this.processJobs(newMessage,phoneNumber);
     }
     else{
-      this.processDescription(self, message, phoneNumber);
+      this.processDescription(message, phoneNumber);
     }
   }
 
@@ -39,7 +39,7 @@ function TextHandler(){
     this.sendBot.send("You are interested in: "+ messageItem.jobs.join(), phoneNumber);
     return messageItem;
   }
-  this,processDescription=function(message, phoneNumber){
+  this.processDescription=function(message, phoneNumber){
     var messageItem=new Message();
     messageItem.senderNo= phoneNumber
     messageItem.description=message;

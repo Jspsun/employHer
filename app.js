@@ -42,7 +42,7 @@ function TextHandler(){
     name=name.trim();
     var jobList=firstSplit[1];
     jobList=jobList.trim();
-    jobList=joblist.toLowerCase();
+    jobList=jobList.toLowerCase();
 
     firebase.database().ref("applicants").child(jobList).push().set({"name": name, "number": phoneNumber});
 

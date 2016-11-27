@@ -5,6 +5,8 @@ var app = firebase.initializeApp({ apiKey: "AIzaSyB-aHO2JYOcvFmjuifuHVDpF_GAOWRG
         databaseURL: "https://breakinequality.firebaseio.com",
         storageBucket: "breakinequality.appspot.com",
         messagingSenderId: "690173784028" });
+        
+
 function Sender(){
 // Find your account sid and auth token in your Twilio account Console.
   this.client = twilio('AC9f4dc30b29b932a901627da4c92a38a4', '0c85242dcc5c50703f691d66fb1d931e');
@@ -46,7 +48,7 @@ function TextHandler(){
 
     firebase.database().ref("applicants").child(jobList).push().set({"name": name, "number": phoneNumber});
 
-    this.sendBot.send("Hi "+ name+". You are interested in working as a: "+ jobList, phoneNumber);
+    this.sendBot.send("Hi "+ name+". Your job listing will be posted shortly: "+ jobList, phoneNumber);
 
 
 
@@ -121,8 +123,9 @@ app.get("/", function (request, response) {
 app.post("/message", function (request, response) {
   console.log(request.body.Body);
   text = request.body.Body;
-
+  
   console.log(request.body.From);
+  console.log(request.body);
   number = request.body.From;
   response = textHandlerBot.process(text, number);
 });

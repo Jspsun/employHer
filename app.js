@@ -4,7 +4,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 var port=Number(process.env.PORT || 3000);
 
 app.get("/", function (request, response) {
-  response.sendFile(/views/index.html);
+  console.log("hello")
 });
 
 

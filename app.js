@@ -2,14 +2,14 @@ var twilio = require('twilio');
 
 function Sender(){
 // Find your account sid and auth token in your Twilio account Console.
-  this.client = twilio('AC25b54868cc856f982bc08b14ee016fdd', 'e1575b5ad1c2a2130715b1d04ea42622');
+  this.client = twilio('AC9f4dc30b29b932a901627da4c92a38a4', '0c85242dcc5c50703f691d66fb1d931e');
 
   this.send=function(message, phoneNumber){
 
     // Send the text message.
     this.client.sendMessage({
       to: phoneNumber,
-      from: '6473615601',
+      from: '16475601733',
       body: message
     });
   }
@@ -29,7 +29,7 @@ function TextHandler(){
   //description
 
   this.process=function(message, phoneNumber){
-    newMessage=message.split().slice(1,message.length).join();
+   var newMessage=message.split().slice(1,message.length).join();
 
     if (message.split()[0].toLowerCase()==="name:"){
       this.processName(newMessage,phoneNumber);
@@ -85,7 +85,7 @@ var engines = require('consolidate');
 var bodyParser = require('body-parser');
 console.log("hello");
 var app = express();
-
+var textHandlerBot=new TextHandler();
 app.use(bodyParser.urlencoded({extended: false})); 
 
 app.set('views', __dirname + '/views');
@@ -99,15 +99,17 @@ app.get("/", function (request, response) {
 
 app.post("/message", function (request, response) {
   console.log(request.body.Body);
-  name = request.body.Body;
+  text = request.body.Body;
+  
   console.log(request.body.From);  
   number = request.body.From;
+  response = textHandlerBot.process(text, number);
 });
 
-var textHandlerBot=new TextHandler();
 
 
-textHandlerBot.process(text, "6477747865")
+
+
 
 
 

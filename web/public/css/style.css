@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
-    background: url(http://www.srune.com/media/uploads/18/5634be14e0366.jpg);
+    background: url(http://www.srune.com/media/uploads/18/5634be14e0366.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
 .site-title-container {
     width: 700px;
-    margin: 200px auto;
+    margin: 300px auto;
     background: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 5px;
@@ -19,4 +22,19 @@ body {
     color: white;
     font-size: 100px;
     margin-bottom: 20px;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 700px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.applicant-data {
+    padding: 20px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 5px;
 }

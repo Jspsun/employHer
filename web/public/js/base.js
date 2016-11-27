@@ -2,6 +2,12 @@ $(document).on('DOMContentLoaded', function () {
     setupRoutes();
     // Initialise Firebase
     initFirebase();
+
+    $('#applicant-search').on('keypress', function (e) {
+        if(e.which === 13){
+            hasher.setHash('search/' + $(this).val());
+        }
+    });
 });
 
 var setupRoutes = function () {

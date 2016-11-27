@@ -2,14 +2,14 @@ var twilio = require('twilio');
 
 function Sender(){
 // Find your account sid and auth token in your Twilio account Console.
-  this.client = twilio('AC25b54868cc856f982bc08b14ee016fdd', 'e1575b5ad1c2a2130715b1d04ea42622');
+  this.client = twilio('AC9f4dc30b29b932a901627da4c92a38a4', '0c85242dcc5c50703f691d66fb1d931e');
 
   this.send=function(message, phoneNumber){
 
     // Send the text message.
     this.client.sendMessage({
       to: phoneNumber,
-      from: '16473615601',
+      from: '16475601733',
       body: message
     });
   }
@@ -36,7 +36,7 @@ function TextHandler(){
     var name=firstSplit[0];
     var jobList=firstSplit[1];
 
-    this.sendBot.send("Hi "+ name+"("+phoneNumber+"). You are interested in: "+ jobList, phoneNumber);
+    this.sendBot.send("Hi "+ name+". You are interested in working as a: "+ jobList, phoneNumber);
 
 
 
